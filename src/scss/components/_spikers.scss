@@ -1,0 +1,176 @@
+.speakers {
+    padding-top: 100px;
+
+    &_title {
+        color: #0D0D17;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    .speaker_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 450px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    .show_more_item {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        width: 146px;
+        height: 40px;
+        border: 1px solid #E5E5E5;
+        cursor: pointer;
+    }
+
+
+    &_wrapper {
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .speaker_item {
+            width: 25%;
+
+            &.hidden_item {
+                display: none;
+            }
+
+            @media (max-width: 992px) {
+                width: 50%;
+            }
+
+            @media (max-width: 450px) {
+                width: 100%;
+            }
+
+            .speaker_item_descr {
+                color: #666;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            .speaker_more_wrapp {
+                display: none;
+                transition: all 0.5s;
+
+                .more_text {
+                    color: #FFF;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+
+                .puls {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+
+            .speaker_image_wrapp {
+                position: relative;
+                background: linear-gradient(1deg, #1A141E -16.27%, rgba(20, 20, 30, 0.00) 45.63%), rgba(20, 20, 30, 0.06);
+                cursor: pointer;
+
+
+                &:hover {
+
+                    .speaker_more_wrapp {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+
+                    }
+
+                    .speaker_more_wrapp {
+                        &.red {
+                            background: linear-gradient(145deg, rgba(229, 48, 48, 0.66) 0%, rgba(255, 158, 158, 0.66) 29.69%, rgba(241, 85, 85, 0.66) 64.06%, rgba(231, 53, 53, 0.66) 100%), linear-gradient(1deg, #1A141E -16.27%, rgba(20, 20, 30, 0.00) 45.63%), rgba(20, 20, 30, 0.06);
+                        }
+                    }
+
+                    .speaker_more_wrapp {
+                        &.blue {
+                            background: linear-gradient(145deg, rgba(32, 77, 239, 0.66) 0%, rgba(114, 144, 255, 0.66) 29.69%, rgba(55, 98, 251, 0.66) 64.06%, rgba(32, 77, 239, 0.66) 100%), linear-gradient(1deg, #1A141E -16.27%, rgba(20, 20, 30, 0.00) 45.63%), rgba(20, 20, 30, 0.06);
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .speaker_name {
+                    position: absolute;
+                    bottom: 65px;
+                    left: 10px;
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 120%;
+                }
+
+                .speaker_attr_wrapp {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 10px;
+                    display: flex;
+                    gap: 16px;
+
+                    .speaker_attr_first {
+                        display: inline-flex;
+                        padding: 3px 10px;
+                        align-items: flex-start;
+                        gap: 10px;
+                        border-radius: 40px;
+                        background: #F4F4F4;
+                    }
+
+                    .speaker_attr_second {
+                        color: #FFF;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0.14px;
+                        display: inline-flex;
+                        padding: 3px 10px;
+                        align-items: flex-start;
+                        gap: 10px;
+                        border-radius: 40px;
+                    }
+
+                    .speaker_attr_second {
+                        &.red {
+                            background: #E53030;
+                        }
+                    }
+
+                    .speaker_attr_second {
+                        &.blue {
+                            background: #204DEF;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}

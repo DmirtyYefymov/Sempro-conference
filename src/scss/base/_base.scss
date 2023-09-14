@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    font-style: normal;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 1240px) {
+        padding: 0 30px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 0 15px;
+    }
+}
+
+.button_group {
+    display: flex;
+    gap: 10px;
+    margin-top: 60px;
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+    }
+}
+
+.registration_btn {
+    background: var(--sempro---red, #e53030);
+    width: 290px;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 30px;
+    text-align: left;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: #e94c4c;
+
+        &::after {
+            right: 8px;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+
+
+    &::after {
+        content: '';
+        background-image: url('/src/icons/thin_big_right.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 11px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.more_btn {
+    width: 290px;
+    height: 60px;
+    background: inherit;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 30px;
+    text-align: left;
+    border: 1px solid #FFF;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+
+    &:hover {
+        border: 1px solid #e94c4c;
+
+        &::after {
+            right: 8px;
+        }
+    }
+
+    &::after {
+        content: '';
+        background-image: url('/src/icons/thin_big_right.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 11px;
+        width: 30px;
+        height: 30px;
+    }
+}
